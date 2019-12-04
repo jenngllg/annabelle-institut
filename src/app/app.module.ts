@@ -12,12 +12,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconRegistry } from '@angular/material/icon';
 import { ScrollStrategyOptions, ScrollDispatcher, ViewportRuler, OverlayContainer, OverlayPositionBuilder, OverlayKeyboardDispatcher } from '@angular/cdk/overlay';
 import { Directionality } from '@angular/cdk/bidi';
+import { PrestationsComponent } from './prestations/prestations.component';
+import { InfosComponent } from './infos/infos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    PrestationsComponent,
+    InfosComponent
   ],
   imports: [
     NgbModule,
