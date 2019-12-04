@@ -298,11 +298,21 @@
 <mat-toolbar color="primary">
 
   <mat-toolbar-row>
-
+<!-- 
     <button mat-icon-button>
       <mat-icon>menu</mat-icon>
-    </button>
+    </button> -->
 
+
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Prestations</button>
+        <button mat-menu-item>Horaires & plan d'accès</button>
+        <button mat-menu-item>Contact</button>
+      </mat-menu>
+      
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end">
 
