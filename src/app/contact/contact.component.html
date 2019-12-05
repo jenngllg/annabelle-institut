@@ -1,1 +1,30 @@
-<p>contact works!</p>
+<section class="contact">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Nom*</mat-label>
+            <input matInput placeholder="Nom">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Prénom*</mat-label>
+            <input matInput placeholder="Prénom">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Mail*</mat-label>
+            <input matInput placeholder="Mail">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field hintLabel="Max 300 caractères" appearance="outline">
+            <mat-label>Votre message*</mat-label>
+            <textarea matInput #input maxlength="300" placeholder="Votre message" matTextareaAutosize matAutosizeMinRows=10></textarea>
+            <mat-hint align="end">{{input.value?.length || 0}}/300</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <button mat-button>Envoyer</button>
+
+</section>

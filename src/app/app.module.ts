@@ -14,6 +14,8 @@ import { ScrollStrategyOptions, ScrollDispatcher, ViewportRuler, OverlayContaine
 import { Directionality } from '@angular/cdk/bidi';
 import { PrestationsComponent } from './prestations/prestations.component';
 import { InfosComponent } from './infos/infos.component';
+import { AutofillMonitor } from '@angular/cdk/text-field';
+import { ContentObserver } from '@angular/cdk/observers';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { InfosComponent } from './infos/infos.component';
     OverlayContainer, 
     OverlayPositionBuilder,
     OverlayKeyboardDispatcher,
-    Directionality 
+    Directionality,
+    AutofillMonitor,
+    ContentObserver
   ],
   bootstrap: [AppComponent]
 })
