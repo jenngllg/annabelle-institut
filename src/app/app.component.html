@@ -292,9 +292,11 @@
 </head>
 
 <body>
+<div class="page">
 
   <mat-toolbar>
     <mat-toolbar-row>
+
 
       <div class="menu">
         <mat-menu #appMenu="matMenu">
@@ -302,7 +304,7 @@
           <button mat-menu-item>Horaires & plan d'accès</button>
           <button mat-menu-item [routerLink]="['/contact']">Contact</button>
         </mat-menu>
-      
+
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
           <mat-icon>menu</mat-icon>
         </button>
@@ -310,7 +312,7 @@
 
       <span class="spacer"></span>
 
-      <img src="../assets/images/logo-white.png">
+      <img src="../assets/images/logo/logo-white.png">
 
       <span class="spacer"></span>
 
@@ -318,7 +320,7 @@
         <a href="https://www.facebook.com/boutiqueannabelleparis/">
           <i class="fa fa-facebook-square fa-2x"></i>
         </a>
-    </div>
+      </div>
 
     </mat-toolbar-row>
   </mat-toolbar>
@@ -328,5 +330,15 @@
   </div>
 
   <footer>
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 footer-adress ">Anna'belle Institut - 10 rue Vauban, 68000 COLMAR</div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 footer-copyright">Copyright © 2020, tous droits réservés</div>
+      </div>
+    </div>
   </footer>
+</div>
+
 </body>
