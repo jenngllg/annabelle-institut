@@ -1,0 +1,23 @@
+ul {
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.partners li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    text-align: center;
+    img {
+        height: auto;
+        opacity: .3;
+        transition: opacity .2s ease-in-out;
+        width: 50%;
+    }
+    a:hover img {
+        opacity: 1;
+    }
+}
