@@ -2,3 +2,17 @@ button {
     background-color: #e10943;
     color: #ffffff;
 }
+
+//mat-input focused color
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #e10943!important;
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #e10943!important;
+}
+
+::ng-deep .mat-input-element {
+    color: #000000!important;
+}
