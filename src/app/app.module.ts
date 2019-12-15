@@ -12,18 +12,34 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconRegistry } from '@angular/material/icon';
 import { ScrollStrategyOptions, ScrollDispatcher, ViewportRuler, OverlayContainer, OverlayPositionBuilder, OverlayKeyboardDispatcher } from '@angular/cdk/overlay';
 import { Directionality } from '@angular/cdk/bidi';
-import { PrestationsComponent } from './prestations/prestations.component';
 import { InfosComponent } from './infos/infos.component';
 import { AutofillMonitor } from '@angular/cdk/text-field';
 import { ContentObserver } from '@angular/cdk/observers';
+import { WaxingComponent } from './waxing/waxing.component';
+import { FaceCareComponent } from './face-care/face-care.component';
+import { HandsFootCareComponent } from './hands-foot-care/hands-foot-care.component';
+import { BodyCareComponent } from './body-care/body-care.component';
+import { MesotherapyComponent } from './mesotherapy/mesotherapy.component';
+import { PermanentMakeupComponent } from './permanent-makeup/permanent-makeup.component';
+import { LookComponent } from './look/look.component';
+import { MenComponent } from './men/men.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    PrestationsComponent,
-    InfosComponent
+    InfosComponent,
+    WaxingComponent,
+    FaceCareComponent,
+    HandsFootCareComponent,
+    BodyCareComponent,
+    MesotherapyComponent,
+    PermanentMakeupComponent,
+    LookComponent,
+    MenComponent,
+    EventsComponent
   ],
   imports: [
     NgbModule,
