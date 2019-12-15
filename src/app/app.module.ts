@@ -19,7 +19,6 @@ import { WaxingComponent } from './waxing/waxing.component';
 import { FaceCareComponent } from './face-care/face-care.component';
 import { BodyCareComponent } from './body-care/body-care.component';
 import { MesotherapyComponent } from './mesotherapy/mesotherapy.component';
-import { PermanentMakeupComponent } from './permanent-makeup/permanent-makeup.component';
 import { LookComponent } from './look/look.component';
 import { MenComponent } from './men/men.component';
 import { EventsComponent } from './events/events.component';
@@ -35,7 +34,6 @@ import { HandsFootsCareComponent } from './hands-foots-care/hands-foots-care.com
     FaceCareComponent,
     BodyCareComponent,
     MesotherapyComponent,
-    PermanentMakeupComponent,
     LookComponent,
     MenComponent,
     EventsComponent,
