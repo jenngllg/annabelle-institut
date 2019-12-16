@@ -4,3 +4,35 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.content {
+    margin: 3rem;
+}
+
+h1 {
+    color: #e10943;
+}
+
+.prestations {
+    align-items: center;
+} 
+
+mat-card.prestation {
+    margin-bottom: 0.5rem;
+    max-width: 50%;
+
+    mat-card-title {
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+            color:#e10943;
+        }
+    }
+
+    button {
+        background-color: #e10943;
+        color: #ffffff;
+    }
+}
