@@ -1,9 +1,36 @@
+.presentation img {
+    margin: 1rem;
+    width: 30%;
+}
+
+.families, .family {
+    display: flex; //tous les objets s'étirent pour avoir la taille du plus grand des objets
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ .prestation-families button {
+    background-color: #e10943;
+    color: #ffffff;
+}
+  
+ .family {
+    flex: 0 1 20%;
+    margin: 1rem;
+
+    .name {
+    color: #e10943;
+    }
+ }
+
 ul {
     list-style: none;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: center; //contrôle l'alignement de tous les objets sur l'axe principal.
+
 }
 
 .partners li {
