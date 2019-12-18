@@ -1,6 +1,14 @@
+.contact {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 button {
     background-color: #e10943;
     color: #ffffff;
+    margin-top: 2rem;
 }
 
 //mat-input focused color
