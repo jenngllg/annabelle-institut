@@ -13,7 +13,7 @@
 <section class="prestation-families">
     <h1>NOS PRESTATIONS</h1>
     <div class="families">
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/body-care']">
             <img mat-card-image src="../../assets/images/prestations/corps.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -26,7 +26,7 @@
             <mat-card-actions>
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/face-care']">
             <img mat-card-image src="../../assets/images/prestations/visage.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -39,7 +39,7 @@
             <mat-card-actions>
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/hands-foots-care']">
             <img mat-card-image src="../../assets/images/prestations/mains.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -52,7 +52,7 @@
             <mat-card-actions align="end">
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/waxing']">
             <img mat-card-image src="../../assets/images/prestations/epilation.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -65,7 +65,7 @@
             <mat-card-actions align="end">
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/mesotherapy']">
             <img mat-card-image src="../../assets/images/prestations/mesotherapie.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -78,7 +78,7 @@
             <mat-card-actions>
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/look']">
             <img mat-card-image src="../../assets/images/prestations/regard.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -91,7 +91,7 @@
             <mat-card-actions>
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/men']">
             <img mat-card-image src="../../assets/images/prestations/homme.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -104,7 +104,7 @@
             <mat-card-actions align="end">
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family">
+        <mat-card class="family" [routerLink]="['/events']">
             <img mat-card-image src="../../assets/images/prestations/maquillage.jpg">
             <mat-card-header>
                 <mat-card-title>
@@ -117,42 +117,49 @@
             <mat-card-actions align="end">
             </mat-card-actions>
         </mat-card>
-
     </div>
-
-    <div id="kalendes-widget-container"></div>
     <button mat-button class="kalendes-button" onclick="kalendes.show()">Réserver en ligne</button>
 
 </section>
 
 <mat-divider></mat-divider>
 
-<section class="recommandations">
-<h1>VOS AVIS</h1>
-<mat-card class="family">
-        <img mat-card-image src="../../assets/images/home/presentation.jpg">
-        <mat-card-header>
-            <mat-card-title>
-                <div class="client">Jennifer G.</div>
-            </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            "Soins, modelage, gommage..."
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-    </mat-card>
+<section class="customer-opinion">
+    <h1>VOS AVIS</h1>
+    <div class="opinions">
+        <mat-card class="opinion">
+            <mat-card-content>
+                "Super institut, je suis cliente fidèle et je suis toujours satisfaite ! La gérante et les
+                esthéticiennes sont très agréables et de très bon conseil !"
+            </mat-card-content>
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="client">Jennifer G.</div>
+                </mat-card-title>
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="opinion">
+            <mat-card-content>
+                ""
+            </mat-card-content>
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="client">Tania M.</div>
+                </mat-card-title>
+            </mat-card-header>
+        </mat-card>
+    </div>
 </section>
 
 <mat-divider></mat-divider>
 
-<section class="client-note">
+<section class="customer-note">
     <h1>MERCI !</h1>
-        <div class="circle">
-            <div class="note-fb">4,9/5</div>
-        </div>
-        <p>C'est la note moyenne donnée par nos clients !</p>
-    </section>
+    <div class="circle">
+        <div class="note-fb">4,9/5</div>
+    </div>
+    <p>C'est la note moyenne donnée par nos clients !</p>
+</section>
 
 <mat-divider></mat-divider>
 
@@ -182,6 +189,11 @@
         <li>
             <a href="https://mnails.fr/">
                 <img src="../../assets/images/partners/mnails.png">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.couleur-caramel.com/boutique/">
+                <img src="../../assets/images/partners/couleur-caramel.png">
             </a>
         </li>
     </ul>
