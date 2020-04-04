@@ -13,15 +13,28 @@
 <section class="prestation-families">
     <h1>NOS PRESTATIONS</h1>
     <div class="families">
-        <mat-card class="family" [routerLink]="['/body-care']">
-            <img mat-card-image src="../../assets/images/prestations/corps.jpg">
+        <mat-card class="family" [routerLink]="['/hands-foots-care']">
+            <img mat-card-image src="../../assets/images/prestations/mains.jpg">
             <mat-card-header>
                 <mat-card-title>
-                    <div class="name">SOIN CORPS</div>
+                    <div class="name">SOIN MAINS & PIEDS</div>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
-                Soins, modelage, gommage...
+                Soins, pose, entretien, dépose, nail art...
+            </mat-card-content>
+            <mat-card-actions align="end">
+            </mat-card-actions>
+        </mat-card>
+        <mat-card class="family" [routerLink]="['/look']">
+            <img mat-card-image src="../../assets/images/prestations/regard.jpg">
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="name">BEAUTE DU REGARD</div>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                Extension & rehaussement de cils, teintures sourcils...
             </mat-card-content>
             <mat-card-actions>
             </mat-card-actions>
@@ -39,17 +52,30 @@
             <mat-card-actions>
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family" [routerLink]="['/hands-foots-care']">
-            <img mat-card-image src="../../assets/images/prestations/mains.jpg">
+        <mat-card class="family" [routerLink]="['/body-care']">
+            <img mat-card-image src="../../assets/images/prestations/corps.jpg">
             <mat-card-header>
                 <mat-card-title>
-                    <div class="name">SOIN MAINS & PIEDS</div>
+                    <div class="name">SOIN CORPS</div>
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
-                Soins, pose, entretien, dépose, nail art...
+                Soins, modelage, gommage...
             </mat-card-content>
-            <mat-card-actions align="end">
+            <mat-card-actions>
+            </mat-card-actions>
+        </mat-card>        
+        <mat-card class="family" [routerLink]="['/slimming']">
+            <img mat-card-image src="../../assets/images/prestations/amincissement.jpg">
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="name">AMINCISSEMENT</div>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                Soins amincissant, lissant...
+            </mat-card-content>
+            <mat-card-actions>
             </mat-card-actions>
         </mat-card>
         <mat-card class="family" [routerLink]="['/waxing']">
@@ -78,19 +104,7 @@
             <mat-card-actions>
             </mat-card-actions>
         </mat-card>
-        <mat-card class="family" [routerLink]="['/look']">
-            <img mat-card-image src="../../assets/images/prestations/regard.jpg">
-            <mat-card-header>
-                <mat-card-title>
-                    <div class="name">BEAUTE DU REGARD</div>
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                Extension & rehaussement de cils, teintures sourcils...
-            </mat-card-content>
-            <mat-card-actions>
-            </mat-card-actions>
-        </mat-card>
+        
         <mat-card class="family" [routerLink]="['/men']">
             <img mat-card-image src="../../assets/images/prestations/homme.jpg">
             <mat-card-header>

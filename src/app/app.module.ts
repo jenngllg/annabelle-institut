@@ -23,6 +23,7 @@ import { LookComponent } from './look/look.component';
 import { MenComponent } from './men/men.component';
 import { EventsComponent } from './events/events.component';
 import { HandsFootsCareComponent } from './hands-foots-care/hands-foots-care.component';
+import { SlimmingComponent } from './slimming/slimming.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HandsFootsCareComponent } from './hands-foots-care/hands-foots-care.com
     LookComponent,
     MenComponent,
     EventsComponent,
-    HandsFootsCareComponent
+    HandsFootsCareComponent,
+    SlimmingComponent
   ],
   imports: [
     NgbModule,
