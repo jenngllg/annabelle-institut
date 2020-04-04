@@ -7,5 +7,28 @@
     <h1>PLAN D'ACCES</h1>
     <div class="address"><i class="fas fa-map-marker-alt"></i> 10 rue Vauban<br>
         68000 COLMAR</div>
-    <div class="phone"><a href="tel:+33982413466"><i class="fas fa-phone-alt"></i> 09 82 41 34 66</a></div>
+        <div id="map"></div>
+        <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = {lat: -25.344, lng: 131.036};
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+          document.getElementById('map'), {zoom: 4, center: uluru});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+        </script>
+        <!--Load the API from the specified URL
+        * The async attribute allows the browser to render the page while the API loads
+        * The key parameter will contain your own API key (which is not needed for this tutorial)
+        * The callback parameter executes the initMap() function
+        -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR6TxvzhwjikwM1952Khht_QIumK-3kS0&callback=initMap">
+        </script>    
+        <div class="phone"><a href="tel:+33982413466"><i class="fas fa-phone-alt"></i> 09 82 41 34 66</a></div>
+    <h1>NOUS CONTACTER PAR MAIL</h1>
+    <div class="mail"><a href="mailto:colmar@anna-belle.paris">colmar@anna-belle.paris</a></div>
 </section>
