@@ -12,6 +12,7 @@ import { MenComponent } from './men/men.component';
 import { MesotherapyComponent } from './mesotherapy/mesotherapy.component';
 import { WaxingComponent } from './waxing/waxing.component';
 import { SlimmingComponent } from './slimming/slimming.component';
+import { CreationsComponent } from './creations/creations.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'home'},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'mesotherapy', component: MesotherapyComponent},
   {path:'waxing', component: WaxingComponent},
   {path:'slimming', component: SlimmingComponent},
+  {path:'creations', component: CreationsComponent},
 ];
 
 @NgModule({
