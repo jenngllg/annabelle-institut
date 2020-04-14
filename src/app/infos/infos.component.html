@@ -1,34 +1,20 @@
-<section class="infos">
-    <h1>HORAIRES MAGASIN & INSTITUT</h1>
-    <div class="opening">
-        Lundi : de 14h00 à 18h30<br>
-        Mardi au samedi : 10h00 à 18h30 (NON STOP)
-    </div>
-    <h1>PLAN D'ACCES</h1>
-    <div class="address"><i class="fas fa-map-marker-alt"></i> 10 rue Vauban<br>
-        68000 COLMAR</div>
-        <div id="map"></div>
-        <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      var uluru = {lat: -25.344, lng: 131.036};
-      // The map, centered at Uluru
-      var map = new google.maps.Map(
-          document.getElementById('map'), {zoom: 4, center: uluru});
-      // The marker, positioned at Uluru
-      var marker = new google.maps.Marker({position: uluru, map: map});
-    }
-        </script>
-        <!--Load the API from the specified URL
-        * The async attribute allows the browser to render the page while the API loads
-        * The key parameter will contain your own API key (which is not needed for this tutorial)
-        * The callback parameter executes the initMap() function
-        -->
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR6TxvzhwjikwM1952Khht_QIumK-3kS0&callback=initMap">
-        </script>    
-        <div class="phone"><a href="tel:+33982413466"><i class="fas fa-phone-alt"></i> 09 82 41 34 66</a></div>
-    <h1>NOUS CONTACTER PAR MAIL</h1>
-    <div class="mail"><a href="mailto:colmar@anna-belle.paris">colmar@anna-belle.paris</a></div>
-</section>
+<div class="container-fluid mt-3 mb-5">
+    <section class="mb-4">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="map-within-card-2" class="map-container rounded-left" style="height: 400px">
+              <iframe src="https://maps.google.com/maps?q=ANNA'BELLE+INSTITUT+10+Rue+Vauban,+68000+Colmar&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-10 col-md-4 mx-auto align-self-center py-4">
+            <h5 class="font-weight-bold pink-text text-uppercase">Anna'belle</h5>
+            <h6 class="font-weight-normal mb-4">Lundi : de 14h00 à 18h30<br>Mardi au samedi : 10h00 à 18h30 (NON STOP)</h6>
+            <p class="text-muted font-weight-light">10 rue Vauban<br>68000 COLMAR</p>
+            <p class="text-muted font-weight-light mb-0">Téléphone : <a href="tel:+33982413466"> 09 82 41 34 66</a><br>Email : <a href="mailto:colmar@anna-belle.paris">colmar@anna-belle.paris</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
