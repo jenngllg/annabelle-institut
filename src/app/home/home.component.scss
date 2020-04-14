@@ -1,14 +1,10 @@
-section.presentation {
+section.team {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.presentation img {
-    margin: 1rem;
-    width: 30%;
-}
 
 .families, .family {
     display: flex; //tous les objets s'étirent pour avoir la taille du plus grand des objets
@@ -49,10 +45,12 @@ section.customer-note {
         border-radius: 50%;
         width: 100px;
         height: 100px;
-        background: #e10943;;
+        background: #e10943;
         border: 1px solid #d1063d;
         position: relative;
+        justify-content: center;
     }
+
     .note-fb {
         color: #ffffff;
         position: absolute;
@@ -67,14 +65,7 @@ section.customer-opinion {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    mat-card {
-        flex: 0 1 40%;
-        margin: 1rem;
-    }
 }
-
-
 
 section.partners {
     display: flex;

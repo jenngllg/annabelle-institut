@@ -1,10 +1,38 @@
-<section class="presentation">
-    <div class="presentation-block">
-        <div class="presentation-text">
-            L'équipe de l'institut Anna'belle est heureuse de vous accueillir le lundi, de 14h à 18h30, et du mardi au
-            samedi, de 10h à 18h au 10 rue Vauban à Colmar.
+<section class="team text-center my-5">
+    <h1>LA TEAM ANNA'BELLE</h1>
+    <div class="members">
+        <p class="grey-text w-responsive mx-auto mb-5">L'équipe de l'institut Anna'belle est heureuse de vous accueillir
+            le lundi, de 14h à 18h30, et du mardi au
+            samedi, de 10h à 18h au 10 rue Vauban à Colmar.</p>
+        <div class="row justify-content-md-center">
+            <div class=" col-lg-3 col-md-6 mb-lg-0 mb-5">
+                <div class="avatar mx-auto">
+                    <img src="./../../assets/images/team/Céline.jpg" class="rounded-circle z-depth-1"
+                        alt="Sample avatar">
+                </div>
+                <h5 class="font-weight-bold mt-4 mb-3">Céline</h5>
+                <p class="text-uppercase pink-text"><strong>Prothésiste ongulaire</strong></p>
+                <p class="grey-text">Certifiée depuis plus de 10 ans, également esthéticienne en formation</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                <div class="avatar mx-auto">
+                    <img src="./../../assets/images/team/nathalie.jpg" class="rounded-circle z-depth-1"
+                        alt="Sample avatar">
+                </div>
+                <h5 class="font-weight-bold mt-4 mb-3">Nathalie</h5>
+                <p class="text-uppercase pink-text"><strong>Gérante</strong></p>
+                <p class="grey-text"></p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
+                <div class="avatar mx-auto">
+                    <img src="./../../assets/images/team/Cindy.jpg" class="rounded-circle z-depth-1"
+                        alt="Sample avatar">
+                </div>
+                <h5 class="font-weight-bold mt-4 mb-3">Cindy</h5>
+                <p class="text-uppercase pink-text"><strong>Esthéticienne diplômée</strong></p>
+                <p class="grey-text">Spécialiste certifiée en extension de cils et prothésiste ongulaire</p>
+            </div>
         </div>
-        <img src="../../assets/images/home/presentation.jpg">
     </div>
 </section>
 
@@ -64,7 +92,7 @@
             </mat-card-content>
             <mat-card-actions>
             </mat-card-actions>
-        </mat-card>        
+        </mat-card>
         <mat-card class="family" [routerLink]="['/slimming']">
             <img mat-card-image src="../../assets/images/prestations/amincissement.jpg">
             <mat-card-header>
@@ -104,7 +132,7 @@
             <mat-card-actions>
             </mat-card-actions>
         </mat-card>
-        
+
         <mat-card class="family" [routerLink]="['/men']">
             <img mat-card-image src="../../assets/images/prestations/homme.jpg">
             <mat-card-header>
@@ -140,28 +168,27 @@
 
 <section class="customer-opinion">
     <h1>VOS AVIS</h1>
-    <div class="opinions">
-        <mat-card class="opinion">
-            <mat-card-content>
-                "Super institut, je suis cliente fidèle et je suis toujours satisfaite ! La gérante et les
-                esthéticiennes sont très agréables et de très bon conseil !"
-            </mat-card-content>
-            <mat-card-header>
-                <mat-card-title>
-                    <div class="client">Jennifer G.</div>
-                </mat-card-title>
-            </mat-card-header>
-        </mat-card>
-        <mat-card class="opinion">
-            <mat-card-content>
-                ""
-            </mat-card-content>
-            <mat-card-header>
-                <mat-card-title>
-                    <div class="client">Tania M.</div>
-                </mat-card-title>
-            </mat-card-header>
-        </mat-card>
+    <div class="container my-5 px-5 pt-5 pb-3 z-depth-1">
+        <div class="text-center dark-grey-text">
+            <div class="row">
+                <div class="col-md-4 mb-4 mt-3">
+                    <p class="lead">"Super institut, je suis cliente fidèle et je suis toujours satisfaite ! La gérante
+                        et les employées  sont très agréables et de très bon conseil !"</p>
+                    <p class="text-muted">- Jennifer G.</p>
+                </div>
+                <div class="col-md-4 mb-4 mt-3">
+                    <p class="lead">"Que ce soit pour les soins du corps ou les ongles je vais chez Anna'belle. L'équipe est très pro 
+                        et super sympa et présente régulièrement des nouveautés en matière de techniques de soins.
+                        J'adore y aller. La déco, le thé ou le café de qualité sont des petits plus qui font aussi peser la balance !"</p>
+                    <p class="text-muted">- Tania M.</p>
+                </div>
+                <div class="col-md-4 mb-4 mt-3">
+                    <p class="lead">"Super institut, je recommande vivement. Esthéticiennes très professionnelles et Nathalie, la gérante est très aimable. 
+                        Anna'belle est un institut dans lequel on se sent bien !"</p>
+                    <p class="text-muted">- Samantha G.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -172,7 +199,7 @@
     <div class="circle">
         <div class="note-fb">4,9/5</div>
     </div>
-    <p>C'est la note moyenne donnée par nos clients !</p>
+    <p class="grey-text w-responsive mx-auto mb-5 text-center">C'est la note moyenne donnée par nos clients !</p>
 </section>
 
 <mat-divider></mat-divider>
