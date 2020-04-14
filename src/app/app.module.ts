@@ -25,6 +25,8 @@ import { EventsComponent } from './events/events.component';
 import { HandsFootsCareComponent } from './hands-foots-care/hands-foots-care.component';
 import { SlimmingComponent } from './slimming/slimming.component';
 import { CreationsComponent } from './creations/creations.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,11 @@ import { CreationsComponent } from './creations/creations.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule 
+    MaterialModule,
+    BrowserModule, 
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule    
   ],
   providers: [ 
     Platform, 
