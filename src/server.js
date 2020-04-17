@@ -30,24 +30,40 @@ app.use(function (req, res, next) {
 
 app.post('/send', function (req, res) {
 
-  let senderName = req.body.contactFormName;
+  let senderFirstName = req.body.contactFormFirstName;
+  let senderLastName = req.body.contactFormLastName;
   let senderEmail = req.body.contactFormEmail;
-  let messageSubject = req.body.contactFormSubjects;
-  let messageText = req.body.contactFormMessage;
-  let copyToSender = req.body.contactFormCopy;
+  let senderMessage = req.body.contactFormMessage;
+  let beRecalled = req.body.contactFormBeRecalled ? "Oui" : "Non";
+  let phoneNumber = req.body.contactFormPhoneNumber ;
+
+  let messageText = "Prénom : '" + senderFirstName
+  + "'\Nom : '" + senderLastName
+  + "'\nMail : '" + senderEmail
+  + "'\nMessage : '" + senderMessage
+  + "'\nSouhaite être rappelé(e) : '" + beRecalled
+  + "'\nTéléphone : '" + phoneNumber;
 
   let mailOptions = {
-    to: ['jenny@gullung.com'], // Enter here the email address on which you want to send emails from your customers
-    from: senderName,
-    subject: messageSubject,
+    to: ['jenny@gullung.com', senderEmail], // Enter here the email address on which you want to send emails from your customers
+    from: senderFirstName + " " + senderLastName,
+    subject: "Nouveau message",
     text: messageText,
     replyTo: senderEmail
   };
 
-  if (senderName === '') {
+  if (senderFirstName === '') {
     res.status(400);
     res.send({
-    message: 'Bad request'
+    message: 'Veuillez renseigner votre prénom'
+    });
+    return;
+  }
+
+  if (senderLastName === '') {
+    res.status(400);
+    res.send({
+    message: 'Veuillez renseigner votre nom'
     });
     return;
   }
@@ -55,15 +71,7 @@ app.post('/send', function (req, res) {
   if (senderEmail === '') {
     res.status(400);
     res.send({
-    message: 'Bad request'
-    });
-    return;
-  }
-
-  if (messageSubject === '') {
-    res.status(400);
-    res.send({
-    message: 'Bad request'
+    message: 'Veuillez renseigner votre email'
     });
     return;
   }
@@ -71,13 +79,9 @@ app.post('/send', function (req, res) {
   if (messageText === '') {
     res.status(400);
     res.send({
-    message: 'Bad request'
+    message: 'Veuillez renseigner votre message'
     });
     return;
-  }
-
-  if (copyToSender) {
-    mailOptions.to.push(senderEmail);
   }
 
   transporter.sendMail(mailOptions, function (error, response) {
@@ -85,12 +89,12 @@ app.post('/send', function (req, res) {
       console.log(error);
       res.end('error');
     } else {
-      console.log('Message sent: ', response);
+      console.log('Message envoyé : ', response);
       res.end('sent');
     }
   });
 });
 
 app.listen(port, function () {
-  console.log('Express started on port: ', port);
+  console.log('Express started on port : ', port);
 });
