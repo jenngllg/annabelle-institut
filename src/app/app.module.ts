@@ -27,6 +27,7 @@ import { SlimmingComponent } from './slimming/slimming.component';
 import { CreationsComponent } from './creations/creations.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     EventsComponent,
     HandsFootsCareComponent,
     SlimmingComponent,
-    CreationsComponent
+    CreationsComponent,
+    LegalNoticeComponent
   ],
   imports: [
     NgbModule,

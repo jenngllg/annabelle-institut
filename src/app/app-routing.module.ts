@@ -13,6 +13,7 @@ import { MesotherapyComponent } from './mesotherapy/mesotherapy.component';
 import { WaxingComponent } from './waxing/waxing.component';
 import { SlimmingComponent } from './slimming/slimming.component';
 import { CreationsComponent } from './creations/creations.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'home'},
@@ -29,6 +30,8 @@ const routes: Routes = [
   {path:'waxing', component: WaxingComponent},
   {path:'slimming', component: SlimmingComponent},
   {path:'creations', component: CreationsComponent},
+  {path:'legal-notice', component: LegalNoticeComponent},
+
 ];
 
 @NgModule({
