@@ -28,6 +28,7 @@ import { CreationsComponent } from './creations/creations.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     HandsFootsCareComponent,
     SlimmingComponent,
     CreationsComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    LoyaltyProgramComponent
   ],
   imports: [
     NgbModule,

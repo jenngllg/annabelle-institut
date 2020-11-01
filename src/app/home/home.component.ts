@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  openPlanity() {
+    window.open("https://www.planity.com/anna-belle-institut-68000-colmar", "_blank"); 
+  }
 }
+
