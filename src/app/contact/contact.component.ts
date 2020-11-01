@@ -11,44 +11,48 @@ export class ContactComponent {
 
 contactForm: FormGroup;
 disabledSubmitButton: boolean = true;
-optionsSelect: Array<any>;
-value = false;
+consent: boolean = false;
+nameRegex = "^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$";
+phoneRegex = "^0[1-6]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$";
 
   @HostListener('input') oninput() {
 
-  if (this.contactForm.valid) {
+  if (this.contactForm.valid && this.consent) {
     this.disabledSubmitButton = false;
+    }
+    else {
+      this.disabledSubmitButton = true;
+
     }
   }
 
   constructor(private fb: FormBuilder, private connectionService: ConnectionService) {
 
   this.contactForm = fb.group({
-    'contactFormFirstName': ['', Validators.required],
-    'contactFormLastName': ['', Validators.required],
+    'contactFormFirstName': ['',  Validators.compose([Validators.required, Validators.maxLength(50), Validators.pattern(this.nameRegex)])],
+    'contactFormLastName': ['', Validators.compose([Validators.required, Validators.maxLength(50), Validators.pattern(this.nameRegex)])], 
     'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
-    'contactFormMessage': ['', Validators.required],
-    'contactFormBeRecalled': [false],
+    'contactFormMessage': ['', Validators.compose([Validators.required, Validators.maxLength(500)])],
+    'contactFormConsent': [false],
     'contactFormPhoneNumber': ['']
     });
   }
 
   ngOnInit() {
-    document.getElementById('contactFormPhoneNumber').style.display = "none";
   }
 
   onSubmit() {
     this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-      alert('Votre message a bien été envoyé, nous vous répondrons dans les plus brefs délais.');
-      this.contactForm.reset();
-      this.disabledSubmitButton = true;
-    }, error => {
-      console.log('Error', error);
-    });
-  }
+    alert('Votre message a bien été envoyé, nous vous répondrons dans les plus brefs délais.');
+    this.contactForm.reset();
+    this.consent = false;
+    this.disabledSubmitButton = true;
+  }, error => {
+    console.log('Error', error);
+  });
+}
 
-  beRecalled() {
-    this.value = !this.value;
-    document.getElementById('contactFormPhoneNumber').style.display = (!this.value ? "none" : "inline");
+  updateConsent() {
+    this.consent = !this.consent;
   }
 }

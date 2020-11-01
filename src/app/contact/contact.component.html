@@ -15,14 +15,16 @@
       rows="3" placeholder="Message"></textarea>
   </div>
 
-  <div class="form-check">
-    <input class="form-check-input" formControlName="contactFormBeRecalled" mdbInputDirective type="checkbox"
-      id="formControlBeRecalled" (click)="beRecalled()">
-    <label class="form-check-label" for="checkbox">Je souhaite être rappelé(e)</label>
-  </div>
+  <p>Si vous souhaitez être rappelé(e), veuillez inscrire votre numéro de téléphone ci-dessous :</p>
 
   <input type="text" formControlName="contactFormPhoneNumber" id="contactFormPhoneNumber" mdbInput class="form-control mb-4"
     placeholder="Téléphone">
+
+  <div class="form-check">
+    <input class="form-check-input" formControlName="contactFormConsent" mdbInputDirective type="checkbox"
+      id="contactFormConsent" (click)="updateConsent()" [checked]="consent">
+    <label class="form-check-label" for="checkbox">En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées pour permettre de me recontacter</label>
+  </div>
 
   <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
     type="submit" [disabled]="disabledSubmitButton">Send</button>

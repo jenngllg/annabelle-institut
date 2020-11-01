@@ -11,8 +11,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'misskilleuse@gmail.com', // Enter here email address from which you want to send emails
-    pass: 'petitejenny' // Enter here password for email account from which you want to send emails
+    user: 'annabelleinstitutcolmar@gmail.com', // Enter here email address from which you want to send emails
+    pass: 'AnnaBelle.010496' // Enter here password for email account from which you want to send emails
   },
   tls: {
   rejectUnauthorized: false
@@ -34,18 +34,17 @@ app.post('/send', function (req, res) {
   let senderLastName = req.body.contactFormLastName;
   let senderEmail = req.body.contactFormEmail;
   let senderMessage = req.body.contactFormMessage;
-  let beRecalled = req.body.contactFormBeRecalled ? "Oui" : "Non";
   let phoneNumber = req.body.contactFormPhoneNumber ;
+  let beRecalled = phoneNumber ? "'\nSouhaite être rappelé(e) au : '" + phoneNumber + "'" : "";
 
   let messageText = "Prénom : '" + senderFirstName
-  + "'\Nom : '" + senderLastName
+  + "'\nNom : '" + senderLastName
   + "'\nMail : '" + senderEmail
   + "'\nMessage : '" + senderMessage
-  + "'\nSouhaite être rappelé(e) : '" + beRecalled
-  + "'\nTéléphone : '" + phoneNumber;
+  + beRecalled;
 
   let mailOptions = {
-    to: ['jenny@gullung.com', senderEmail], // Enter here the email address on which you want to send emails from your customers
+    to: ['colmar@anna-belle.paris'], // Enter here the email address on which you want to send emails from your customers
     from: senderFirstName + " " + senderLastName,
     subject: "Nouveau message",
     text: messageText,
