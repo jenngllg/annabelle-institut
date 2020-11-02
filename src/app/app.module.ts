@@ -29,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.component';
+import { PermanentComponent } from './permanent/permanent.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.compo
     SlimmingComponent,
     CreationsComponent,
     LegalNoticeComponent,
-    LoyaltyProgramComponent
+    LoyaltyProgramComponent,
+    PermanentComponent
   ],
   imports: [
     NgbModule,

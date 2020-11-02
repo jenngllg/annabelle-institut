@@ -39,3 +39,26 @@ div.note {
     font-size: 0.7em;
     font-style: italic;
 }
+
+.prestations, .prestation {
+    display: flex; //tous les objets s'étirent pour avoir la taille du plus grand des objets
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.prestations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prestation {
+    flex: 0 1 40%;
+    margin: 1rem;
+    cursor: pointer;
+
+    .name {
+    color: #e10943;
+    }
+}
