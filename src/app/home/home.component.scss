@@ -48,6 +48,8 @@ section.customer-note {
         border: 1px solid #d1063d;
         position: relative;
         justify-content: center;
+        margin: 1em;
+
     }
 
     .note-fb {
@@ -64,6 +66,10 @@ section.customer-opinion {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    .lead {
+        font-size: 1em;
+    }
 }
 
 section.partners {
@@ -80,6 +86,8 @@ ul {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: center; //contrôle l'alignement de tous les objets sur l'axe principal.
+    margin: 1em;
+
 }
 
 .partners li {
@@ -100,4 +108,24 @@ ul {
 
 mat-divider {
     margin: 2rem;
+}
+
+@media (max-width: 1000px)  { 
+
+    .family {
+        flex: 0 1 40%;
+        margin: 1rem;
+        cursor: pointer;
+        }
+    
+    }
+
+@media (max-width: 730px)  { 
+
+.family {
+    flex: 0 1 100%;
+    margin: 1rem;
+    cursor: pointer;
+    }
+
 }

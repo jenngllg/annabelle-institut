@@ -58,7 +58,33 @@ section.prestations {
     margin: 1rem;
     cursor: pointer;
 
+    
+
     .name {
     color: #e10943;
+    }
+}
+
+@media (max-width: 1000px)  { 
+
+    .prestation {
+        flex: 0 1 100%;
+        margin: 1rem;
+        cursor: pointer;
+    }
+
+    mat-card.prestation {
+        margin-bottom: 0.5rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 730px)  { 
+    mat-card.prestation {
+        mat-card-title {
+            font-size: 1em;
+            display: unset;
+            justify-content: normal;
+        }
     }
 }
