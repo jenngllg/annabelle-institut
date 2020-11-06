@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.component';
 import { PermanentComponent } from './permanent/permanent.component';
+import { BookService } from './book.service';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { PermanentComponent } from './permanent/permanent.component';
     OverlayKeyboardDispatcher,
     Directionality,
     AutofillMonitor,
-    ContentObserver
+    ContentObserver,
+    BookService
   ],
   bootstrap: [AppComponent]
 })

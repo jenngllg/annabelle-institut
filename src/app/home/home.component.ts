@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from './../book.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,13 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public bookService: BookService) { }
 
   ngOnInit() {
   }
 
-  openPlanity() {
-    window.open("https://www.planity.com/anna-belle-institut-68000-colmar", "_blank"); 
-  }
 }
 

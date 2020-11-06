@@ -15,16 +15,22 @@ button {
     margin-top: 2rem;
 }
 
-//mat-input focused color
-::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #e10943!important;
-}
-
-// mat-label focused style
-::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-    color: #e10943!important;
-}
-
-::ng-deep .mat-input-element {
-    color: #000000!important;
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus, .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(226,6,67,.25) !important;
+    border-color: #e10943 !important;
 }

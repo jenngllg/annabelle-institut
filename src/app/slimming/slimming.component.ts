@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-slimming',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlimmingComponent implements OnInit {
 
-  constructor() { }
+  constructor(public bookService: BookService) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-waxing',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WaxingComponent implements OnInit {
 
-  constructor() { }
+  constructor(public bookService: BookService) { }
 
   ngOnInit() {
   }
