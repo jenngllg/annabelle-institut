@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 })
 
 export class ConnectionService {
-  url: string = "http://localhost:3000/send"; //todo : modifier après déploiement en prod
+  url: string = "https://annabelle-mail-server.herokuapp.com/send";
   constructor(private http: HttpClient) {}
 
   sendMessage(messageContent: any) {
