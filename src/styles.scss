@@ -62,7 +62,6 @@ section.prestations {
 .prestation {
     flex: 0 1 40%;
     margin: 1rem;
-    cursor: pointer;
 
     .name {
     color: #e10943;
@@ -74,7 +73,6 @@ section.prestations {
     .prestation {
         flex: 0 1 100%;
         margin: 1rem;
-        cursor: pointer;
     }
 
     mat-card.prestation {
