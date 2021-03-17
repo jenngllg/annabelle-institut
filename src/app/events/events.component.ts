@@ -10,7 +10,10 @@ export class EventsComponent implements OnInit {
 
   constructor(public bookService: BookService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    document.querySelectorAll('mat-card.prestation.mat-card').forEach(item => {
+        item.addEventListener('click', this.bookService.openPlanity)
+    })
   }
 
 }
