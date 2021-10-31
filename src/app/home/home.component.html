@@ -10,16 +10,6 @@
 
         <div class="row justify-content-md-center">
 
-            <div class=" col-lg-3 col-md-6 mb-lg-0 mb-5">
-                <div class="avatar mx-auto">
-                    <img src="/assets/images/team/celine.jpg" class="rounded-circle z-depth-1"
-                        alt="Sample avatar">
-                </div>
-                <h5 class="font-weight-bold mt-4 mb-3">Céline</h5>
-                <p class="text-uppercase pink-text"><strong>Esthéticienne diplômée</strong></p>
-                <p class="grey-text">Spécialiste en maquillage permanent des sourcils en poil à poil et poudré et prothésiste ongulaire certifiée depuis plus de 10 ans</p>
-            </div>
-
             <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
                 <div class="avatar mx-auto">
                     <img src="/assets/images/team/nathalie.jpg" class="rounded-circle z-depth-1"
@@ -30,6 +20,16 @@
                 <p class="grey-text"></p>
             </div>
 
+            <div class=" col-lg-3 col-md-6 mb-lg-0 mb-5">
+                <div class="avatar mx-auto">
+                    <img src="/assets/images/team/celine.jpg" class="rounded-circle z-depth-1"
+                        alt="Sample avatar">
+                </div>
+                <h5 class="font-weight-bold mt-4 mb-3">Céline</h5>
+                <p class="text-uppercase pink-text"><strong>Esthéticienne diplômée</strong></p>
+                <p class="grey-text">Spécialiste en maquillage permanent des sourcils en poil à poil et poudré, prothésiste ongulaire certifiée depuis plus de 10 ans et perceuse certifiée</p>
+            </div>
+
             <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
                 <div class="avatar mx-auto">
                     <img src="/assets/images/team/cindy.jpg" class="rounded-circle z-depth-1"
@@ -38,6 +38,16 @@
                 <h5 class="font-weight-bold mt-4 mb-3">Cindy</h5>
                 <p class="text-uppercase pink-text"><strong>Esthéticienne diplômée</strong></p>
                 <p class="grey-text">Spécialiste certifiée en extension de cils et prothésiste ongulaire</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
+                <div class="avatar mx-auto">
+                    <img src="/assets/images/team/jeanaya.jpg" class="rounded-circle z-depth-1"
+                        alt="Sample avatar">
+                </div>
+                <h5 class="font-weight-bold mt-4 mb-3">Jeanaya</h5>
+                <p class="text-uppercase pink-text"><strong>Apprentie esthéticienne</strong></p>
+                <p class="grey-text">2ème année</p>
             </div>
 
         </div>
@@ -76,7 +86,7 @@
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
-                Extension & rehaussement de cils, teintures sourcils...
+                Extension de cils, teintures sourcils...
             </mat-card-content>
             <mat-card-actions>
             </mat-card-actions>
@@ -152,6 +162,20 @@
             </mat-card-actions>
         </mat-card>
 
+        <mat-card class="family" [routerLink]="['/piercing']">
+            <img mat-card-image src="/assets/images/prestations/piercing.jpg">
+            <mat-card-header>
+                <mat-card-title>
+                    <div class="name">PIERCING</div>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                Oreilles, nombril, arcade, nez, labret...
+            </mat-card-content>
+            <mat-card-actions align="end">
+            </mat-card-actions>
+        </mat-card>
+
         <mat-card class="family" [routerLink]="['/permanent']">
             <img mat-card-image src="/assets/images/prestations/permanent.jpg">
             <mat-card-header>
@@ -160,7 +184,7 @@
                 </mat-card-title>
             </mat-card-header>
             <mat-card-content>
-                Sourcils, lèvres, eye-liner...
+                Création de ligne de sourcils, retouches...
             </mat-card-content>
             <mat-card-actions align="end">
             </mat-card-actions>
@@ -196,7 +220,13 @@
         
     </div>
 
-    <button mat-button (click)="bookService.openPlanity()" class="book-online">Réserver en ligne</button>
+    <div class="prestation-actions">
+        <button mat-button (click)="bookService.openPlanity()" class="book-online">Réserver en ligne</button>
+
+        <button mat-button class="gift-card">
+            <a href="https://secure.payplug.com/p/jvfBAhn" target="_blank">Offrir un bon cadeau</a>
+        </button>
+    </div>
 
 </section>
 
@@ -246,7 +276,7 @@
 
     <div class="circle">
 
-        <div class="note-fb">4,8/5</div>
+        <div class="note-fb">5/5</div>
 
     </div>
 

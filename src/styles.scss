@@ -11,10 +11,15 @@ h1 {
     color: #e10943;
 }
 
-button.book-online.mat-button.mat-button-base {
+button.book-online.mat-button.mat-button-base,
+button.gift-card.mat-button.mat-button-base {
     background-color: #e10943;
     color: #ffffff;
     margin: 1rem;
+}
+
+button.gift-card.mat-button.mat-button-base a {
+    color: #fff;
 }
 
 .prestations {

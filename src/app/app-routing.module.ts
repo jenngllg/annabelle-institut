@@ -16,6 +16,8 @@ import { CreationsComponent } from './creations/creations.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.component';
 import { PermanentComponent } from './permanent/permanent.component';
+import { PiercingComponent } from './piercing/piercing.component';
+import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'home'},
@@ -35,7 +37,8 @@ const routes: Routes = [
   {path:'legal-notice', component: LegalNoticeComponent},
   {path:'loyalty-program', component: LoyaltyProgramComponent},
   {path:'permanent', component: PermanentComponent},
-
+  {path:'piercing', component: PiercingComponent},
+  {path:'sale-terms', component: SaleTermsComponent},
 ];
 
 @NgModule({

@@ -2,7 +2,13 @@
 
     <h1>SOINS DU CORPS</h1>
 
-    <button mat-button (click)="bookService.openPlanity()" class="book-online">Réserver en ligne</button>
+    <div class="prestation-actions">
+        <button mat-button (click)="bookService.openPlanity()" class="book-online">Réserver en ligne</button>
+
+        <button mat-button class="gift-card">
+            <a href="https://secure.payplug.com/p/jvfBAhn" target="_blank">Offrir un bon cadeau</a>
+        </button>
+    </div>
 
     <div class="prestations">
 
@@ -24,7 +30,7 @@
                 <div class="name">RELAX' MAX</div>
                 <div class="infos">
                     <i class="far fa-clock"></i>
-                    1h - 60€
+                    1h - 80€
                 </div>
             </mat-card-title>
             <mat-card-content>Gommage et modelage du corps</mat-card-content>

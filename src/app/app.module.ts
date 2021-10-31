@@ -31,6 +31,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.component';
 import { PermanentComponent } from './permanent/permanent.component';
 import { BookService } from './book.service';
+import { PiercingComponent } from './piercing/piercing.component';
+import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { BookService } from './book.service';
     CreationsComponent,
     LegalNoticeComponent,
     LoyaltyProgramComponent,
-    PermanentComponent
+    PermanentComponent,
+    PiercingComponent,
+    SaleTermsComponent
   ],
   imports: [
     NgbModule,

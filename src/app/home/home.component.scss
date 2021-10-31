@@ -19,9 +19,14 @@ section.prestation-families {
 }
 
 .family {
-    flex: 0 1 18%;
+    flex: 0 1 19%;
     margin: 1rem;
     cursor: pointer;
+    text-align: center;
+
+    mat-card-content {
+        width: 100%;
+    }
 
     .name {
     color: #e10943;
@@ -92,7 +97,7 @@ ul {
         height: auto;
         opacity: .3;
         transition: opacity .2s ease-in-out;
-        width: 50%;
+        width: 60%;
     }
     
     a:hover img {
