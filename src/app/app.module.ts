@@ -33,6 +33,7 @@ import { PermanentComponent } from './permanent/permanent.component';
 import { BookService } from './book.service';
 import { PiercingComponent } from './piercing/piercing.component';
 import { SaleTermsComponent } from './sale-terms/sale-terms.component';
+import { FlyerComponent } from './flyer/flyer.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { SaleTermsComponent } from './sale-terms/sale-terms.component';
     LoyaltyProgramComponent,
     PermanentComponent,
     PiercingComponent,
-    SaleTermsComponent
+    SaleTermsComponent,
+    FlyerComponent
   ],
   imports: [
     NgbModule,

@@ -18,6 +18,7 @@ import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.compo
 import { PermanentComponent } from './permanent/permanent.component';
 import { PiercingComponent } from './piercing/piercing.component';
 import { SaleTermsComponent } from './sale-terms/sale-terms.component';
+import { FlyerComponent } from './flyer/flyer.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'home'},
@@ -39,6 +40,8 @@ const routes: Routes = [
   {path:'permanent', component: PermanentComponent},
   {path:'piercing', component: PiercingComponent},
   {path:'sale-terms', component: SaleTermsComponent},
+  {path:'flyer', component: FlyerComponent},
+  {path:'**', pathMatch: 'full', redirectTo: 'home'}, // if incorrect path, go to home page
 ];
 
 @NgModule({
