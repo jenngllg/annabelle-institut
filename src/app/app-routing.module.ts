@@ -23,7 +23,6 @@ import { FlyerComponent } from './flyer/flyer.component';
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'home'},
   {path:'home', component: HomeComponent},
-  {path:'contact', component: ContactComponent},
   {path:'body-care', component: BodyCareComponent},
   {path:'events', component: EventsComponent},
   {path:'face-care', component: FaceCareComponent},
