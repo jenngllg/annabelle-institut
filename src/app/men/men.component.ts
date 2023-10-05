@@ -15,5 +15,4 @@ export class MenComponent implements OnInit {
         item.addEventListener('click', this.bookService.openPlanity)
     })
   }
-
 }

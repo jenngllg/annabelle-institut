@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
 import { BodyCareComponent } from './body-care/body-care.component';
 import { EventsComponent } from './events/events.component';
 import { FaceCareComponent } from './face-care/face-care.component';
@@ -19,6 +18,7 @@ import { PermanentComponent } from './permanent/permanent.component';
 import { PiercingComponent } from './piercing/piercing.component';
 import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 import { FlyerComponent } from './flyer/flyer.component';
+import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanent-hair-removal.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'home'},
@@ -32,6 +32,7 @@ const routes: Routes = [
   {path:'men', component: MenComponent},
   {path:'mesotherapy', component: MesotherapyComponent},
   {path:'waxing', component: WaxingComponent},
+  {path:'permanent-hair-removal', component: PermanentHairRemovalComponent},
   {path:'slimming', component: SlimmingComponent},
   {path:'creations', component: CreationsComponent},
   {path:'legal-notice', component: LegalNoticeComponent},

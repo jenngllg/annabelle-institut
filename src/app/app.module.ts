@@ -34,6 +34,7 @@ import { BookService } from './book.service';
 import { PiercingComponent } from './piercing/piercing.component';
 import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 import { FlyerComponent } from './flyer/flyer.component';
+import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanent-hair-removal.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FlyerComponent } from './flyer/flyer.component';
     PermanentComponent,
     PiercingComponent,
     SaleTermsComponent,
-    FlyerComponent
+    FlyerComponent,
+    PermanentHairRemovalComponent
   ],
   imports: [
     NgbModule,
