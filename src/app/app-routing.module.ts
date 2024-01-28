@@ -19,6 +19,7 @@ import { PiercingComponent } from './piercing/piercing.component';
 import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 import { FlyerComponent } from './flyer/flyer.component';
 import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanent-hair-removal.component';
+import { PhotorejuvenationComponent } from './photorejuvenation/photorejuvenation.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'home'},
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path:'mesotherapy', component: MesotherapyComponent},
   {path:'waxing', component: WaxingComponent},
   {path:'permanent-hair-removal', component: PermanentHairRemovalComponent},
+  {path:'photorejuvenation', component: PhotorejuvenationComponent},
   {path:'slimming', component: SlimmingComponent},
   {path:'creations', component: CreationsComponent},
   {path:'legal-notice', component: LegalNoticeComponent},

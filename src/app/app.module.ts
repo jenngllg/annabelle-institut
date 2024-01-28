@@ -35,6 +35,7 @@ import { PiercingComponent } from './piercing/piercing.component';
 import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 import { FlyerComponent } from './flyer/flyer.component';
 import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanent-hair-removal.component';
+import { PhotorejuvenationComponent } from './photorejuvenation/photorejuvenation.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanen
     PiercingComponent,
     SaleTermsComponent,
     FlyerComponent,
-    PermanentHairRemovalComponent
+    PermanentHairRemovalComponent,
+    PhotorejuvenationComponent
   ],
   imports: [
     NgbModule,
