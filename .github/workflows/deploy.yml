@@ -15,9 +15,9 @@ jobs:
         with:
           node-version: '14'
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Build
-        run: npm run build -- --base-href "https://jenngllg.github.io/annabelle-institut/"
+        run: npm run build -- --base-href "/"
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
