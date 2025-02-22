@@ -21,7 +21,7 @@ import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanen
 import { PhotorejuvenationComponent } from './photorejuvenation/photorejuvenation.component';
 
 const routes: Routes = [
-  {path:'', pathMatch: 'full', redirectTo: 'home'},
+  { path: '', component: HomeComponent },
   {path:'home', component: HomeComponent},
   {path:'body-care', component: BodyCareComponent},
   {path:'events', component: EventsComponent},
