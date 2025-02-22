@@ -32,7 +32,6 @@ import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.compo
 import { PermanentComponent } from './permanent/permanent.component';
 import { BookService } from './book.service';
 import { PiercingComponent } from './piercing/piercing.component';
-import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 import { FlyerComponent } from './flyer/flyer.component';
 import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanent-hair-removal.component';
 import { PhotorejuvenationComponent } from './photorejuvenation/photorejuvenation.component';
@@ -57,7 +56,6 @@ import { PhotorejuvenationComponent } from './photorejuvenation/photorejuvenatio
     LoyaltyProgramComponent,
     PermanentComponent,
     PiercingComponent,
-    SaleTermsComponent,
     FlyerComponent,
     PermanentHairRemovalComponent,
     PhotorejuvenationComponent

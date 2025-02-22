@@ -16,7 +16,6 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.component';
 import { PermanentComponent } from './permanent/permanent.component';
 import { PiercingComponent } from './piercing/piercing.component';
-import { SaleTermsComponent } from './sale-terms/sale-terms.component';
 import { FlyerComponent } from './flyer/flyer.component';
 import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanent-hair-removal.component';
 import { PhotorejuvenationComponent } from './photorejuvenation/photorejuvenation.component';
@@ -41,7 +40,6 @@ const routes: Routes = [
   {path:'loyalty-program', component: LoyaltyProgramComponent},
   {path:'permanent', component: PermanentComponent},
   {path:'piercing', component: PiercingComponent},
-  {path:'sale-terms', component: SaleTermsComponent},
   {path:'flyer', component: FlyerComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'home'}, // if incorrect path, go to home page
 ];
