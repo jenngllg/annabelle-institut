@@ -52,7 +52,7 @@
             /* harmony import */ var _permanent_hair_removal_permanent_hair_removal_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./permanent-hair-removal/permanent-hair-removal.component */ "./docs/app/permanent-hair-removal/permanent-hair-removal.component.ts");
             /* harmony import */ var _photorejuvenation_photorejuvenation_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./photorejuvenation/photorejuvenation.component */ "./docs/app/photorejuvenation/photorejuvenation.component.ts");
             var routes = [
-                { path: '', pathMatch: 'full', redirectTo: 'home' },
+                { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
                 { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
                 { path: 'body-care', component: _body_care_body_care_component__WEBPACK_IMPORTED_MODULE_4__["BodyCareComponent"] },
                 { path: 'events', component: _events_events_component__WEBPACK_IMPORTED_MODULE_5__["EventsComponent"] },

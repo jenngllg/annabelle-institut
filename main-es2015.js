@@ -78,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
     { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
     { path: 'body-care', component: _body_care_body_care_component__WEBPACK_IMPORTED_MODULE_4__["BodyCareComponent"] },
     { path: 'events', component: _events_events_component__WEBPACK_IMPORTED_MODULE_5__["EventsComponent"] },
