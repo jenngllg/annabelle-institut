@@ -18,8 +18,11 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Build
         run: npm run build -- --base-href "/"
+      - name: Create 404.html
+        run: cp dist/anna-belle/index.html dist/anna-belle/404.html #Handle SPA and allows Angular routing
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: dist
+          folder: dist/anna-belle
+          clean: true
