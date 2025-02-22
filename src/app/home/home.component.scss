@@ -1,0 +1,130 @@
+section.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.families, .family {
+    display: flex; //tous les objets s'étirent pour avoir la taille du plus grand des objets
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.prestation-families {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.family {
+    flex: 0 1 19%;
+    margin: 1rem;
+    cursor: pointer;
+    text-align: center;
+
+    mat-card-content {
+        width: 100%;
+    }
+
+    .name {
+    color: #e10943;
+    }
+}
+
+section.customer-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .circle {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background: #e10943;
+        border: 1px solid #d1063d;
+        position: relative;
+        justify-content: center;
+        margin: 1em;
+
+    }
+
+    .note-fb {
+        color: #ffffff;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 1.2em;
+    }
+}
+
+section.customer-opinion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .lead {
+        font-size: 1em;
+    }
+}
+
+section.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center; //contrôle l'alignement de tous les objets sur l'axe principal.
+    margin: 1em;
+
+}
+
+.partners li {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    img {
+        height: auto;
+        opacity: .3;
+        transition: opacity .2s ease-in-out;
+        width: 60%;
+    }
+    
+    a:hover img {
+        opacity: 1;
+    }
+}
+
+mat-divider {
+    margin: 2rem;
+}
+
+@media (max-width: 1000px)  { 
+
+    .family {
+        flex: 0 1 40%;
+        margin: 1rem;
+        cursor: pointer;
+        }
+    
+    }
+
+@media (max-width: 730px)  { 
+
+.family {
+    flex: 0 1 100%;
+    margin: 1rem;
+    cursor: pointer;
+    }
+
+}

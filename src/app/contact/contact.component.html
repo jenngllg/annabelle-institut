@@ -1,0 +1,32 @@
+<form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <p class="h4 mb-4">Nous contacter</p>
+
+  <input type="text" formControlName="contactFormFirstName" id="contactFormFirstName" mdbInput class="form-control mb-4"
+    placeholder="Prénom">
+
+  <input type="text" formControlName="contactFormLastName" id="contactFormLastName" mdbInput class="form-control mb-4"
+    placeholder="Nom">
+
+  <input type="email" formControlName="contactFormEmail" id="contactFormEmail" mdbInput class="form-control mb-4"
+    placeholder="E-mail">
+
+  <div class="form-group">
+    <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="formControlMessage"
+      rows="3" placeholder="Message"></textarea>
+  </div>
+
+  <p>Si vous souhaitez être rappelé(e), veuillez inscrire votre numéro de téléphone ci-dessous :</p>
+
+  <input type="text" formControlName="contactFormPhoneNumber" id="contactFormPhoneNumber" mdbInput class="form-control mb-4"
+    placeholder="Téléphone">
+
+  <div class="form-check">
+    <input class="form-check-input" formControlName="contactFormConsent" mdbInputDirective type="checkbox"
+      id="contactFormConsent" (click)="updateConsent()" [checked]="consent">
+    <label class="form-check-label" for="checkbox">En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées pour permettre de me recontacter</label>
+  </div>
+
+  <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+    type="submit" [disabled]="disabledSubmitButton">Envoyer</button>
+
+</form>
