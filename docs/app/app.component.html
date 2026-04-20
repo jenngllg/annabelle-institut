@@ -1,24 +1,27 @@
 <head>
-  <script src="https://cmp.osano.com/169lZzSh2mhIw3TTz/ee32cbdf-fb4d-4e64-aa94-1c588eb1fb5a/osano.js"></script>
+  <script src="https://cmp.osano.com/169lZzSh2mhIw3TTz/ee32cbdf-fb4d-4e64-aa94-1c588eb1fb5a/osano.js" defer></script>
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"></noscript>
 <!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"></noscript>
 <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"></noscript>
 </head>
 
 <body>
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js" defer></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" defer></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" defer></script>
 <!-- PayPlug -->
-<script type="text/javascript" src="https://secure.payplug.com/static/button/scripts/payplug.js"></script>
+<script type="text/javascript" src="https://secure.payplug.com/static/button/scripts/payplug.js" defer></script>
 
 
   <div class="page">
@@ -50,7 +53,7 @@
             <button mat-menu-item [routerLink]="['/photorejuvenation']">Photo-rajeunissement</button>
           </mat-menu>
 
-          <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <button mat-icon-button [matMenuTriggerFor]="appMenu" aria-label="Menu">
             <mat-icon>menu</mat-icon>
           </button>
         </div>
@@ -64,11 +67,11 @@
         <span class="spacer"></span>
 
         <div class="social-medias">
-          <a href="https://www.facebook.com/institutannabellecolmar/">
-            <i class="fab fa-facebook-square fa-2x"></i>
+          <a href="https://www.facebook.com/institutannabellecolmar/" aria-label="Facebook">
+            <i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com/annabelle_institut_colmar/">
-            <i class="fab fa-instagram fa-2x"></i>
+          <a href="https://www.instagram.com/annabelle_institut_colmar/" aria-label="Instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
           </a>
         </div>
 
@@ -132,19 +135,15 @@
             <h5 class="font-weight-bold text-uppercase mb-4">Suivez-nous</h5>
             <hr class="black accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 80px;">
             <ul class="list-unstyled text-md-left">
-              <a type="button" class="btn-floating btn-fb" href="https://www.facebook.com/institutannabellecolmar/">
-                <i class="fab fa-facebook-square"></i>
-              </a>
-              <a type="button" class="btn-floating btn-fb" href="https://www.instagram.com/annabelle_institut_colmar/">
-                <i class="fab fa-instagram"></i>
-              </a>
+              <li><a type="button" class="btn-floating btn-fb" href="https://www.facebook.com/institutannabellecolmar/" aria-label="Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a></li>
+              <li><a type="button" class="btn-floating btn-fb" href="https://www.instagram.com/annabelle_institut_colmar/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
             <h5 class="font-weight-bold text-uppercase mb-4">Paiements</h5>
             <hr class="black accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 80px;">
             <ul class="list-unstyled text-md-left">
-              <img src="./../assets/images/logo/cb.jpg" alt="Logo CB">
-              <img src="./../assets/images/logo/visa.png" alt="Logo VISA">
-              <img src="./../assets/images/logo/mastercard.png" alt="Logo MasterCard">
+              <li><img src="./../assets/images/logo/cb.jpg" alt="Logo CB"></li>
+              <li><img src="./../assets/images/logo/visa.png" alt="Logo VISA"></li>
+              <li><img src="./../assets/images/logo/mastercard.png" alt="Logo MasterCard"></li>
             </ul>
           </div>
         </div>
