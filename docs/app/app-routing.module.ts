@@ -1,47 +1,30 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { BodyCareComponent } from './body-care/body-care.component';
-import { EventsComponent } from './events/events.component';
-import { FaceCareComponent } from './face-care/face-care.component';
-import { HandsFootsCareComponent } from './hands-foots-care/hands-foots-care.component';
-import { InfosComponent } from './infos/infos.component';
-import { LookComponent } from './look/look.component';
-import { MenComponent } from './men/men.component';
-import { MesotherapyComponent } from './mesotherapy/mesotherapy.component';
-import { WaxingComponent } from './waxing/waxing.component';
-import { SlimmingComponent } from './slimming/slimming.component';
-import { CreationsComponent } from './creations/creations.component';
-import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
-import { LoyaltyProgramComponent } from './loyalty-program/loyalty-program.component';
-import { PermanentComponent } from './permanent/permanent.component';
-import { PiercingComponent } from './piercing/piercing.component';
-import { FlyerComponent } from './flyer/flyer.component';
-import { PermanentHairRemovalComponent } from './permanent-hair-removal/permanent-hair-removal.component';
-import { PhotorejuvenationComponent } from './photorejuvenation/photorejuvenation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {path:'home', component: HomeComponent},
-  {path:'body-care', component: BodyCareComponent},
-  {path:'events', component: EventsComponent},
-  {path:'face-care', component: FaceCareComponent},
-  {path:'hands-foots-care', component: HandsFootsCareComponent},
-  {path:'infos', component: InfosComponent},
-  {path:'look', component: LookComponent},
-  {path:'men', component: MenComponent},
-  {path:'mesotherapy', component: MesotherapyComponent},
-  {path:'waxing', component: WaxingComponent},
-  {path:'permanent-hair-removal', component: PermanentHairRemovalComponent},
-  {path:'photorejuvenation', component: PhotorejuvenationComponent},
-  {path:'slimming', component: SlimmingComponent},
-  {path:'creations', component: CreationsComponent},
-  {path:'legal-notice', component: LegalNoticeComponent},
-  {path:'loyalty-program', component: LoyaltyProgramComponent},
-  {path:'permanent', component: PermanentComponent},
-  {path:'piercing', component: PiercingComponent},
-  {path:'flyer', component: FlyerComponent},
-  {path:'**', pathMatch: 'full', redirectTo: 'home'}, // if incorrect path, go to home page
+  { path: 'home', component: HomeComponent },
+  { path: 'body-care', loadChildren: () => import('./body-care/body-care.module').then(m => m.BodyCareModule) },
+  { path: 'events', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) },
+  { path: 'face-care', loadChildren: () => import('./face-care/face-care.module').then(m => m.FaceCareModule) },
+  { path: 'hands-foots-care', loadChildren: () => import('./hands-foots-care/hands-foots-care.module').then(m => m.HandsFootsCareModule) },
+  { path: 'infos', loadChildren: () => import('./infos/infos.module').then(m => m.InfosModule) },
+  { path: 'look', loadChildren: () => import('./look/look.module').then(m => m.LookModule) },
+  { path: 'men', loadChildren: () => import('./men/men.module').then(m => m.MenModule) },
+  { path: 'mesotherapy', loadChildren: () => import('./mesotherapy/mesotherapy.module').then(m => m.MesotherapyModule) },
+  { path: 'waxing', loadChildren: () => import('./waxing/waxing.module').then(m => m.WaxingModule) },
+  { path: 'permanent-hair-removal', loadChildren: () => import('./permanent-hair-removal/permanent-hair-removal.module').then(m => m.PermanentHairRemovalModule) },
+  { path: 'photorejuvenation', loadChildren: () => import('./photorejuvenation/photorejuvenation.module').then(m => m.PhotorejuvenationModule) },
+  { path: 'slimming', loadChildren: () => import('./slimming/slimming.module').then(m => m.SlimmingModule) },
+  { path: 'creations', loadChildren: () => import('./creations/creations.module').then(m => m.CreationsModule) },
+  { path: 'legal-notice', loadChildren: () => import('./legal-notice/legal-notice.module').then(m => m.LegalNoticeModule) },
+  { path: 'loyalty-program', loadChildren: () => import('./loyalty-program/loyalty-program.module').then(m => m.LoyaltyProgramModule) },
+  { path: 'permanent', loadChildren: () => import('./permanent/permanent.module').then(m => m.PermanentModule) },
+  { path: 'piercing', loadChildren: () => import('./piercing/piercing.module').then(m => m.PiercingModule) },
+  { path: 'flyer', loadChildren: () => import('./flyer/flyer.module').then(m => m.FlyerModule) },
+  { path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 
 @NgModule({
