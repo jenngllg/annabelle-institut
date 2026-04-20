@@ -6,16 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Institut Anna'Belle Colmar - Soins, amincissement, épilation, mésothérapie, beauté du regard & maquillage permanent</title>
   <meta name="description" content="L'institut Anna'belle Colmar propose de nombreuses prestations de beauté">
-  <base href="/">
+  <base href="./">
+  <meta http-equiv="refresh" content="0;url=./">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <link rel="icon" 
-      type="image/png" 
+  <link rel="icon"
+      type="image/png"
       href="./assets/images/logo/favicon.png">
+  <script>
+    (function () {
+      var pathname = window.location.pathname || '/';
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      var segments = pathname.split('/').filter(Boolean);
+      var repoPrefix = segments.length > 0 ? '/' + segments[0] : '';
+      var routePath = pathname.slice(repoPrefix.length) || '/';
+      var redirectUrl = repoPrefix + '/?p=' + encodeURIComponent(routePath) +
+        '&q=' + encodeURIComponent(search.slice(1)) + hash;
+
+      window.location.replace(redirectUrl);
+    })();
+  </script>
 </head>
 
 <body>
-  <app-root></app-root>
+  <p>Redirection en cours...</p>
+  <p><a href="./">Retour à l'accueil</a></p>
 </body>
 
 </html>
