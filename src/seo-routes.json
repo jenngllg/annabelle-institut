@@ -1,0 +1,111 @@
+{
+  "baseUrl": "https://annabelle-institut.com",
+  "routes": [
+    {
+      "path": "",
+      "title": "Institut Anna'Belle Colmar : soins, épilation, cils, ongles",
+      "description": "Institut de beauté Anna'Belle, 10 rue Vauban à Colmar : soins visage et corps, épilation, lumière pulsée, cils, ongles, maquillage permanent.",
+      "priority": "1.0",
+      "changefreq": "monthly"
+    },
+    {
+      "path": "home",
+      "canonical": "",
+      "sitemap": false
+    },
+    {
+      "path": "hands-foots-care",
+      "title": "Soins des mains et des pieds à Colmar | Institut Anna'Belle",
+      "description": "Pose d'ongles en gel et au chablon, entretien, vernis semi-permanent, soins des mains et des pieds à l'institut Anna'Belle, 10 rue Vauban à Colmar."
+    },
+    {
+      "path": "look",
+      "title": "Extension de cils et sourcils à Colmar | Anna'Belle",
+      "description": "Extension de cils, rehaussement de cils, browlift et teinture des cils et sourcils à l'institut Anna'Belle de Colmar. Tarifs et réservation en ligne."
+    },
+    {
+      "path": "face-care",
+      "title": "Soins du visage à Colmar | Institut Anna'Belle",
+      "description": "Soins du visage Ingrid Millet anti-âge, hydratants et éclat à l'institut Anna'Belle de Colmar. Tarifs et réservation en ligne."
+    },
+    {
+      "path": "body-care",
+      "title": "Soins du corps et modelages à Colmar | Institut Anna'Belle",
+      "description": "Modelages, pierres chaudes, gommages, soins jambes légères et pressothérapie à l'institut Anna'Belle de Colmar. Tarifs et réservation en ligne."
+    },
+    {
+      "path": "slimming",
+      "title": "Amincissement à Colmar | Institut Anna'Belle",
+      "description": "Soins amincissants et lissants à l'institut Anna'Belle de Colmar. Tarifs, cures et réservation en ligne."
+    },
+    {
+      "path": "permanent-hair-removal",
+      "title": "Épilation lumière pulsée à Colmar | Anna'Belle",
+      "description": "Épilation durable à la lumière pulsée pour femmes et hommes à l'institut Anna'Belle de Colmar. Tarifs par zone et réservation."
+    },
+    {
+      "path": "waxing",
+      "title": "Épilation à la cire femme à Colmar | Anna'Belle",
+      "description": "Épilation visage, aisselles, jambes et maillot à l'institut Anna'Belle de Colmar. Tous les tarifs et la réservation en ligne."
+    },
+    {
+      "path": "men",
+      "title": "Épilation homme à Colmar | Institut Anna'Belle",
+      "description": "Épilation pour homme : torse, dos, sourcils, forfait barbe à l'institut Anna'Belle de Colmar. Tarifs et réservation en ligne."
+    },
+    {
+      "path": "piercing",
+      "title": "Piercing oreilles, nez, nombril à Colmar | Anna'Belle",
+      "description": "Piercing des oreilles, du nez, du nombril, de l'arcade et du labret par une perceuse certifiée à l'institut Anna'Belle de Colmar."
+    },
+    {
+      "path": "permanent",
+      "title": "Maquillage permanent sourcils à Colmar | Anna'Belle",
+      "description": "Maquillage permanent des sourcils en poil à poil et poudré, retouches, à l'institut Anna'Belle de Colmar."
+    },
+    {
+      "path": "mesotherapy",
+      "title": "Mésothérapie esthétique à Colmar | Institut Anna'Belle",
+      "description": "Mésothérapie esthétique Skinshooter visage, cou et contour des yeux à l'institut Anna'Belle de Colmar. Tarifs et réservation en ligne."
+    },
+    {
+      "path": "events",
+      "title": "Maquillage mariée et événements à Colmar | Anna'Belle",
+      "description": "Maquillage mariée, maquillage de jour ou de soirée et coaching maquillage entre amies à l'institut Anna'Belle de Colmar."
+    },
+    {
+      "path": "photorejuvenation",
+      "title": "Photo-rajeunissement à Colmar | Institut Anna'Belle",
+      "description": "Photo-rajeunissement par lumière pulsée du visage, du cou et du décolleté à l'institut Anna'Belle de Colmar."
+    },
+    {
+      "path": "creations",
+      "title": "Nos réalisations | Institut Anna'Belle Colmar",
+      "description": "Découvrez en photos les réalisations de l'équipe Anna'Belle à Colmar : ongles, regard, maquillage permanent."
+    },
+    {
+      "path": "infos",
+      "title": "Horaires et plan d'accès | Institut Anna'Belle Colmar",
+      "description": "Institut Anna'Belle, 10 rue Vauban à Colmar : ouvert le lundi de 14h à 18h30 et du mardi au samedi de 10h à 18h30. Téléphone 09 82 41 34 66.",
+      "changefreq": "monthly"
+    },
+    {
+      "path": "loyalty-program",
+      "title": "Programme de fidélité | Institut Anna'Belle Colmar",
+      "description": "Programme de fidélité de l'institut Anna'Belle à Colmar : 5 % du cumul de vos 10 prestations remisés sur la 11e."
+    },
+    {
+      "path": "legal-notice",
+      "title": "Mentions légales et confidentialité | Anna'Belle Colmar",
+      "description": "Mentions légales, hébergement, protection des données personnelles et cookies du site de l'institut Anna'Belle à Colmar.",
+      "priority": "0.1"
+    },
+    {
+      "path": "flyer",
+      "title": "Flyer des prestations | Institut Anna'Belle Colmar",
+      "description": "Toutes les prestations et tarifs de l'institut Anna'Belle à Colmar.",
+      "sitemap": false,
+      "noindex": true
+    }
+  ]
+}

@@ -1,28 +1,82 @@
-name: Deploy Angular to GitHub Pages
+name: Deploy site to GitHub Pages
 on:
   push:
     branches:
       - master
+  # Daily rebuild so new Instagram posts show up on the "Réalisations" page.
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+permissions:
+  contents: write # push the built site to gh-pages
+  actions: write  # keep this scheduled workflow enabled (see last step)
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # Scheduled runs start from the default branch (develop): always deploy master.
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          ref: master
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
+          node-version: '22'
+
+      # The gallery currently online: kept as is if Instagram cannot be reached today.
+      - name: Restore the Instagram gallery currently online
+        run: |
+          if git fetch --depth=1 origin gh-pages && git archive FETCH_HEAD assets/instagram | tar -x -C "$RUNNER_TEMP"; then
+            mkdir -p src/assets/instagram
+            cp -r "$RUNNER_TEMP/assets/instagram/." src/assets/instagram/
+            echo "Previous gallery restored."
+          else
+            echo "No previous gallery online."
+          fi
+
+      # Image resizing for the Instagram gallery (only dependency, CI only, not committed).
+      - name: Install image tools
+        run: npm install --no-save --no-package-lock sharp@0.34
+
+      # Latest Instagram posts, copied into src/assets/instagram (no third-party widget).
+      # On failure (expired token...), the previous gallery is kept, the site is still
+      # deployed, and the last step fails the run so that GitHub sends an e-mail.
+      - name: Fetch Instagram posts
+        id: instagram
+        continue-on-error: true
+        run: node scripts/fetch-instagram.js
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ vars.INSTAGRAM_USER_ID }}
+
+      # Static build, no dependency to install: one HTML page per route (HTTP 200 on
+      # GitHub Pages), 404.html, sitemap.xml, robots.txt, CNAME and .nojekyll.
       - name: Build
-        run: npm run build -- --base-href "/"
-      - name: Create 404.html
-        run: cp dist/anna-belle/index.html dist/anna-belle/404.html #Handle SPA and allows Angular routing
+        run: node scripts/build.js
+
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist/anna-belle
+          folder: dist
           clean: true
+
+      # GitHub disables scheduled workflows of a public repository after 60 days without
+      # activity. Re-enabling it through the API on every run resets that delay, without
+      # any commit (same technique as the keepalive-workflow action).
+      - name: Keep the daily schedule enabled
+        if: always()
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/deploy.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Report an Instagram failure
+        if: steps.instagram.outcome == 'failure'
+        run: |
+          echo "::error::Instagram posts could not be fetched: the previous gallery was kept online. Check or renew the INSTAGRAM_TOKEN secret."
+          exit 1

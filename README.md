@@ -1,27 +1,49 @@
-# AnnaBelle
+# Institut Anna'Belle
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
+Site de l'institut Anna'Belle (Colmar) : https://annabelle-institut.com
 
-## Development server
+HTML, CSS et JavaScript statiques, sans framework ni dépendance npm. Seul Node (12 ou plus) est nécessaire pour assembler les pages.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Arborescence
 
-## Code scaffolding
+```
+src/
+  layout.html         gabarit commun : <head>, en-tête, menu, pied de page
+  pages/<page>.html   contenu de chaque page (home.html = accueil)
+  seo-routes.json     URL, titre et description de chaque page (sitemap inclus)
+  css/style.css       toute la mise en forme
+  js/main.js          menu et plan Google Maps au clic (le site marche sans JS)
+  assets/             images, icônes (icons.svg), polices Roboto
+scripts/
+  build.js            assemble src/ dans dist/
+  serve-dist.js       serveur local qui se comporte comme GitHub Pages
+  fetch-instagram.js  récupère les derniers posts Instagram (galerie « Réalisations »)
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Travailler en local
 
-## Build
+```sh
+npm start        # build puis http://localhost:8765
+npm run build    # build seul, dans dist/
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Pour modifier un tarif ou un texte : éditer `src/pages/<page>.html`, puis relancer `npm start`.
+Pour ajouter une page : créer `src/pages/<url>.html`, l'ajouter dans `src/seo-routes.json` et dans le menu de `src/layout.html`.
 
-## Running unit tests
+La galerie Instagram a besoin du secret `INSTAGRAM_TOKEN` (et de la variable `INSTAGRAM_USER_ID`). Sans eux, la page « Réalisations » affiche simplement un lien vers le compte Instagram.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## QR code « Scannez moi » (ne pas casser)
 
-## Running end-to-end tests
+Le QR code imprimé pour les clientes (`src/assets/images/qrcode.jpg`, aussi publié à https://annabelle-institut.com/assets/images/qrcode.jpg) ouvre **http://annabelle-institut.com/flyer** : la page `src/pages/flyer.html`, qui affiche toutes les prestations les unes sous les autres.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Ne jamais supprimer ni renommer la page `flyer` (route `flyer` dans `src/seo-routes.json`) : les QR codes déjà imprimés ne fonctionneraient plus.
+- Ne pas supprimer ni déplacer `qrcode.jpg`.
+- Pour ajouter une rubrique au flyer, ajouter une ligne `<!-- build: include <page> -->` dans `src/pages/flyer.html`.
 
-## Further help
+## Mise en ligne
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Chaque push sur `master` (et chaque matin, pour rafraîchir Instagram) lance `.github/workflows/deploy.yml` : récupération Instagram, `node scripts/build.js`, puis publication de `dist/` sur la branche `gh-pages`, servie par GitHub Pages avec le domaine `annabelle-institut.com`.
+
+Si Instagram ne répond pas (jeton expiré ou révoqué), la galerie déjà en ligne est conservée, le site est quand même publié, et l'exécution est marquée en échec : GitHub envoie alors un e-mail. Il suffit de renouveler le secret `INSTAGRAM_TOKEN`.
+
+GitHub coupe les tâches planifiées d'un dépôt public après 60 jours sans activité : la dernière étape du workflow réactive la planification à chaque exécution pour éviter cette coupure. En cas de doute, l'onglet Actions indique si le workflow est actif, et le bouton « Run workflow » le relance à la main.
