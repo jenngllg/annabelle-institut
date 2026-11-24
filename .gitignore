@@ -46,4 +46,5 @@ testem.log
 Thumbs.db
 
 # Instagram posts, fetched at build time (scripts/fetch-instagram.js)
-/docs/assets/instagram
+/src/assets/instagram
+/src/assets/instagram.tmp
