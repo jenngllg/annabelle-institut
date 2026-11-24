@@ -3,12 +3,22 @@ on:
   push:
     branches:
       - master
+  # Daily rebuild so new Instagram posts show up on the "Réalisations" page.
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        # Scheduled runs start from the default branch (develop): always deploy master.
+        with:
+          ref: master
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -16,6 +26,13 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+      # Latest Instagram posts, copied into docs/assets/instagram (no third-party widget).
+      # Never fails the deploy: without a valid token the page shows a link to Instagram.
+      - name: Fetch Instagram posts
+        run: node scripts/fetch-instagram.js
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ vars.INSTAGRAM_USER_ID }}
       - name: Build
         run: npm run build -- --base-href "/"
       - name: Create 404.html
