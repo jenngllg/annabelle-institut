@@ -1,22 +1,11 @@
-# Dockerfile for legacy Angular 8 project
-# Use Node 10 (compatible with Angular 8)
-FROM node:10.16.3
+# Aperçu local du site statique : docker build -t annabelle . && docker run -p 8765:8765 annabelle
+FROM node:22-alpine
 
-# Set working directory
 WORKDIR /usr/src/app
 
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install -g @angular/cli@8.3.14 \
-    && npm install
-
-# Copy the rest of the app
+# Aucune dépendance npm : le build et le serveur n'utilisent que Node.
 COPY . .
+RUN node scripts/build.js
 
-# Expose default Angular port
-EXPOSE 4200
-
-# Start the Angular app and listen on all interfaces
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+EXPOSE 8765
+CMD ["node", "scripts/serve-dist.js", "8765"]
